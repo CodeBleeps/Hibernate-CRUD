@@ -24,6 +24,8 @@ public class EmployeeCRUDMainV2 {
 			System.out.println("4. Update Employee Salary by EmployeeId");
 			System.out.println("5. View All Employee");
 			System.out.println("6. Search by Employee Name");
+			System.out.println("7. Count of Employees");
+			System.out.println("8. Max Salary Drawn");
 			System.out.println("Enter your choice");
 			choice = scanner.nextInt();
 			switch (choice) {
@@ -38,6 +40,14 @@ public class EmployeeCRUDMainV2 {
 				}else {
 					System.out.println("No Employees Found with such name.");
 				}
+				
+				break;
+			case 8:
+				System.out.println("Max Salary drawn by Employee : " + employeeService.maxSalaryDrawn());
+				
+				break;
+			case 7:
+				System.out.println("Count of Working Employees : " + employeeService.getCountofEmployees());
 				
 				break;
 			case 1:

@@ -44,4 +44,14 @@ public class EmployeeServiceImpl implements EmployeeService {
 		return EMPLOYEE_REPOSITORY.getEmployeebyEmployeeName(name);
 	}
 
+	@Override
+	public long getCountofEmployees() {
+		return EMPLOYEE_REPOSITORY.getCountofEmployees();
+	}
+
+	@Override
+	public double maxSalaryDrawn() {
+		return EMPLOYEE_REPOSITORY.maxSalaryDrawn();
+	}
+
 }

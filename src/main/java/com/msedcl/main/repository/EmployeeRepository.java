@@ -12,4 +12,6 @@ public interface EmployeeRepository {
 	Employee deleteEmployeebyEmployeeId(int employeeId);
 	List<Employee> getAllEmployees();
 	List<Employee> getEmployeebyEmployeeName(String name);
+	long getCountofEmployees();
+	double maxSalaryDrawn();
 }

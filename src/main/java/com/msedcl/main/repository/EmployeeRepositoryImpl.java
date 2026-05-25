@@ -91,5 +91,23 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
 				.createQuery(hql, Employee.class).setParameter("empName", name).getResultList();
 		return employeeList;
 	}
+	
+	@Override
+	public long getCountofEmployees() {
+		entityManager = HibernateUtil.getEntityManager();
+		String hql = "Select count(e) CNT FROM Employee e";
+		long count = entityManager
+				.createQuery(hql, Long.class).getSingleResult();
+		return count;
+	}
+	
+	@Override
+	public double maxSalaryDrawn() {
+		entityManager = HibernateUtil.getEntityManager();
+		String hql = "Select max(e.salary) CNT FROM Employee e";
+		double count = entityManager
+				.createQuery(hql, Double.class).getSingleResult();
+		return count;
+	}
 
 }
